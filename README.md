@@ -11,6 +11,6 @@
     
   
 <p align="center">
-  <img src="https://github.com/Mahonry/ClusteringMexicanSoccer/blob/master/appImage.png", width = "70">
+  <img src="https://github.com/Mahonry/ClusteringMexicanSoccer/blob/master/appImage.png">
 </p>
 
