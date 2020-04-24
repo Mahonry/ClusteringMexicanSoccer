@@ -3,4 +3,13 @@
 
 
 
-Para ver el codigo de clusterización y resultado de los clusters [Click aqui](https://mahonry.github.io/ClusteringMexicanSoccer/)
+##Para ver el codigo de clusterización y resultado de los clusters [Click aqui](https://mahonry.github.io/ClusteringMexicanSoccer/)
+
+##Para correr la aplicación 
+    
+    Rscript app.R
+    
+    
+ 
+
+
