@@ -1,0 +1,66 @@
+
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R es un software libre y viene sin GARANTIA ALGUNA.
+Usted puede redistribuirlo bajo ciertas circunstancias.
+Escriba 'license()' o 'licence()' para detalles de distribucion.
+
+R es un proyecto colaborativo con muchos contribuyentes.
+Escriba 'contributors()' para obtener más información y
+'citation()' para saber cómo citar R o paquetes de R en publicaciones.
+
+Escriba 'demo()' para demostraciones, 'help()' para el sistema on-line de ayuda,
+o 'help.start()' para abrir el sistema de ayuda HTML con su navegador.
+Escriba 'q()' para salir de R.
+
+[Previously saved workspace restored]
+
+> function(input, output, session) {
++   data <- read.csv("./data/data.csv")
++   data <- data[,-1]
++ 
++   selectedData <- reactive({
++     data[, c(input$xcol, input$ycol)]
++   })
++   
++   clusters <- reactive({
++     kmeans(selectedData(), input$clusters)
++   })
++   
++   output$plot1 <- renderPlot({
++     palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3",
++               "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
++     
++     par(mar = c(5.1, 4.1, 0, 1))
++     plot(selectedData(),
++          col = clusters()$cluster,
++          pch = 20, cex = 3)
++     points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
++   })
++   
++ }
+function (input, output, session) 
+{
+    data <- read.csv("./data/data.csv")
+    data <- data[, -1]
+    selectedData <- reactive({
+        data[, c(input$xcol, input$ycol)]
+    })
+    clusters <- reactive({
+        kmeans(selectedData(), input$clusters)
+    })
+    output$plot1 <- renderPlot({
+        palette(c("#E41A1C", "#377EB8", "#4DAF4A", "#984EA3", 
+            "#FF7F00", "#FFFF33", "#A65628", "#F781BF", "#999999"))
+        par(mar = c(5.1, 4.1, 0, 1))
+        plot(selectedData(), col = clusters()$cluster, pch = 20, 
+            cex = 3)
+        points(clusters()$centers, pch = 4, cex = 4, lwd = 4)
+    })
+}
+> 
+> proc.time()
+   user  system elapsed 
+  0.153   0.029   0.151 

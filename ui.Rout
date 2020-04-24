@@ -1,0 +1,38 @@
+
+R version 3.4.4 (2018-03-15) -- "Someone to Lean On"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R es un software libre y viene sin GARANTIA ALGUNA.
+Usted puede redistribuirlo bajo ciertas circunstancias.
+Escriba 'license()' o 'licence()' para detalles de distribucion.
+
+R es un proyecto colaborativo con muchos contribuyentes.
+Escriba 'contributors()' para obtener más información y
+'citation()' para saber cómo citar R o paquetes de R en publicaciones.
+
+Escriba 'demo()' para demostraciones, 'help()' para el sistema on-line de ayuda,
+o 'help.start()' para abrir el sistema de ayuda HTML con su navegador.
+Escriba 'q()' para salir de R.
+
+[Previously saved workspace restored]
+
+> # k-means only works with numerical variables,
+> # so don't give the user the option to select
+> # a categorical variable
+> vars <- setdiff(names(data), "Species")
+> 
+> pageWithSidebar(
++   headerPanel('Jugadores Futbol Mexicanos k-means clustering'),
++   sidebarPanel(
++     selectInput('xcol', 'X Variable', names(data)),
++     selectInput('ycol', 'Y Variable', names(data), selected = vars[[2]]),
++     numericInput('clusters', 'Cluster count', 3, min = 1, max = 9)
++   ),
++   mainPanel(
++     plotOutput('plot1')
++   )
++ )
+Error in pageWithSidebar(headerPanel("Jugadores Futbol Mexicanos k-means clustering"),  : 
+  no se pudo encontrar la función "pageWithSidebar"
+Ejecución interrumpida
