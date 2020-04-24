@@ -6,8 +6,8 @@ vars <- setdiff(names(data), "Species")
 pageWithSidebar(
   headerPanel('Jugadores Futbol Mexicanos k-means clustering'),
   sidebarPanel(
-    selectInput('xcol', 'X Variable', vars),
-    selectInput('ycol', 'Y Variable', vars, selected = vars[[2]]),
+    selectInput('xcol', 'X Variable', names(data)),
+    selectInput('ycol', 'Y Variable', names(data), selected = vars[[2]]),
     numericInput('clusters', 'Cluster count', 3, min = 1, max = 9)
   ),
   mainPanel(
