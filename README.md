@@ -1,7 +1,7 @@
 # ClusteringMexicanSoccer
 ## Análisis, clusterización   y aplicación interactiva de la liga mexicana de futbol
 
-**Para ver el codigo de scrapping a la pagina https://ligamx.net** [Click aqui] (https://github.com/Mahonry/ClusteringMexicanSoccer/blob/master/Scrapping_Ligamexicana.R)
+**Para ver el codigo de scrapping a la pagina https://ligamx.net** [Click aqui](https://github.com/Mahonry/ClusteringMexicanSoccer/blob/master/Scrapping_Ligamexicana.R)
 
 
 
