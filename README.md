@@ -17,10 +17,10 @@ lusteringMexicanSoccer/
 </p>
 
 
-Relación entre las variables 
+Relación entre las variables dentro de los clusters
 
 <p align="center">
-  <img src="./Rplo01.png">
+  <img src="./Rplot01.png">
 </p>
 
 
