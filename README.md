@@ -2,7 +2,7 @@
 ## Análisis, clusterización   y aplicación interactiva de la liga mexicana de futbol
 
 **Para ver el codigo de scrapping a la pagina https://ligamx.net** [Click aqui](https://github.com/Mahonry/ClusteringMexicanSoccer/blob/master/Scrapping_Ligamexicana.R)
-
+lusteringMexicanSoccer/
 
 
 **Para ver el código de clusterización y resultado de los clusters** [Click aqui](https://mahonry.github.io/ClusteringMexicanSoccer/)
@@ -15,4 +15,15 @@
 <p align="center">
   <img src="https://github.com/Mahonry/ClusteringMexicanSoccer/blob/master/appImage.png">
 </p>
+
+
+Relación entre las variables 
+
+<p align="center">
+  <img src="./Rplo01.png">
+</p>
+
+
+
+
 
